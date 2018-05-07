@@ -1,0 +1,88 @@
+/* ----------------------------------------------------- */
+/* Variables */
+
+:root {
+    /* Fonts */
+    --primaryFont: 'Quicksand','Open Sans' ,sans-serif;
+    
+    /* Colors */
+    --black: #000;
+    --white: #fff;
+
+    --lightBlack: #333;
+}
+
+
+/* ----------------------------------------------------- */
+/* Generals */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primaryFont);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+h1, h2 {
+    cursor: default;
+}
+
+.blue {
+    color: #425A9E;
+}
+
+.red {
+    color: #AD232E;
+}
+
+
+/* ----------------------------------------------------- */
+/* Navbar */
+#header {
+    height: 80vh;
+    background: rgba(0, 0, 0, .5) url(../img/bitcoin.jpg) center center no-repeat;
+    background-size: 100% auto;
+    background-blend-mode: darken;
+
+    color: var(--white);
+
+    animation: breath 12s linear infinite;
+}
+
+.header-top {
+    padding-top: 2rem;
+}
+
+.header-top-menu li {
+    margin-left: 2rem;
+}
+.header-top-menu li:first-child {
+    margin-left: 0;
+}
+
+.header-top-menu a {
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+
+
+/* ----------------------------------------------------- */
+/* Animation */
+@keyframes breath {
+0%   { background-size: 100% auto; }
+50%  { background-size: 125% auto; }
+100% { background-size: 100% auto; }
+}
