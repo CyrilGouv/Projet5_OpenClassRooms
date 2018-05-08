@@ -186,7 +186,8 @@ h1, h2 {
     padding: 4rem 0;
 }
 
-.more {
+.more,
+.contact {
     margin-right: 2rem;
 }
 
@@ -230,6 +231,28 @@ h1, h2 {
     color: var(--lightBlack);
     font-weight: 300;
 }
+
+
+/* ----------------------------------------------------- */
+/* Contact */
+.contact {
+    padding: 4rem 0;
+}
+
+.contact-form h2 {
+    text-transform: uppercase;
+}
+
+.contact-form p {
+    font-weight: 300;
+    color: var(--lightBlack);
+}
+
+.contact-form form {
+    margin-top: 3rem;
+}
+
+
 
 /* ----------------------------------------------------- */
 /* Footer */

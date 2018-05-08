@@ -7,9 +7,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <div class="more">
+                <div class="mentions">
                     <h2>Comment accepter le bitcoin ?</h2>
-                    <div class="more-content">
+                    <div class="mentions-content">
                         <p>
                             Vous avez une boutique en ligne ou vous proposez des services payants ? Vous aimeriez accepter le bitcoin comme monnaie mais vous ne savez pas comment faire ? Cette page vous aidera peut-être à y voir plus clair.
                         </p>

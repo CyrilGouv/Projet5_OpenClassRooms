@@ -12,7 +12,7 @@
             </p>
             <p class="header-blurb-cta">
                 Pourquoi pas la votre ?<br>
-                <a href="/en-savoir-plus" class="btn">EN SAVOIR PLUS</a>
+                <a href="{{ route('more') }}" class="btn">EN SAVOIR PLUS</a>
             </p>
         </div>
     </header>

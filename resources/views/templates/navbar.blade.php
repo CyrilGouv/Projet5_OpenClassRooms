@@ -13,7 +13,7 @@
                     <ul class="d-flex">
                         <li><a href="/">Accueil</a></li>
                         <li><a href="{{ route('more') }}">En savoir plus</a></li>
-                        <li><a href="/">Contact</a></li>
+                        <li><a href="{{ route('contact') }}">Contact</a></li>
                     </ul>
                 </nav>
             </div>

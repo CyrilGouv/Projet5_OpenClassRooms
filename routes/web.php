@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/more', function () {
     return view('more');
 })->name('more');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
