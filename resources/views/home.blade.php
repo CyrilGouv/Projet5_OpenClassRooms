@@ -24,4 +24,6 @@
             <div id="map-google"></div>
         </div>
     </section>
+
+    @include('templates/footer')
 @endsection
