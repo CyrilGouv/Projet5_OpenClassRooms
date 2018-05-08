@@ -10,6 +10,7 @@
     --white: #fff;
 
     --lightBlack: #333;
+    --bitcoin: #E8973D;
 }
 
 
@@ -39,6 +40,17 @@ h1, h2 {
     cursor: default;
 }
 
+.btn {
+    border: 2px solid var(--bitcoin);
+    color: var(--bitcoin);
+    font-weight: 700;
+}
+.btn:hover {
+    background-color: var(--bitcoin);
+    color: white;
+    border: 2px solid var(--bitcoin);
+}
+
 .blue {
     color: #425A9E;
 }
@@ -51,8 +63,9 @@ h1, h2 {
 /* ----------------------------------------------------- */
 /* Navbar */
 #header {
+    position: relative;
     height: 80vh;
-    background: rgba(0, 0, 0, .5) url(../img/bitcoin.jpg) center center no-repeat;
+    background: rgba(0, 0, 0, .7) url(../img/bitcoin.jpg) center center no-repeat;
     background-size: 100% auto;
     background-blend-mode: darken;
 
@@ -75,14 +88,64 @@ h1, h2 {
 .header-top-menu a {
     color: var(--white);
     text-transform: uppercase;
+
+    transition: .3s;
+}
+.header-top-menu a:hover {
+    color: var(--bitcoin);
 }
 
+.header-blurb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
+.header-blurb {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.header-blurb .counter {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--bitcoin);
+}
+
+.header-blurb-underline {
+    position: relative;
+}
+
+.header-blurb-underline:after {
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--bitcoin);
+}
+
+.header-blurb-cta {
+    margin-top: 3rem;
+
+    font-size: 2rem;
+    text-transform: none;
+    font-weight: 300;
+}
+
+.header-blurb-cta .btn {
+    margin-top: 1.2rem;
+}
 
 /* ----------------------------------------------------- */
 /* Animation */
 @keyframes breath {
-0%   { background-size: 100% auto; }
-50%  { background-size: 125% auto; }
-100% { background-size: 100% auto; }
+    0%   { background-size: 100% auto; }
+    50%  { background-size: 125% auto; }
+    100% { background-size: 100% auto; }
 }
