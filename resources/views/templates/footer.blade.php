@@ -5,6 +5,7 @@
             <p>Crée par <a href="http://www.cyrilgouverneur.com">Cyril Gouverneur</a></p>
             <p>Copyright &copy; {{ date('Y') }}</p>
             <p>Tous droits réservés</p>
+            <p><a href="{{ route('mentions') }}">Mentions Légales</a></p>
         </div>
     </div>
 </footer>

@@ -255,6 +255,20 @@ h1, h2 {
 
 
 /* ----------------------------------------------------- */
+/* Mentions Légales */
+.mentions {
+    padding: 4rem 0;
+}
+
+.mentions h2 {
+    margin-bottom: 2rem;
+
+    text-transform: uppercase;
+}
+
+
+
+/* ----------------------------------------------------- */
 /* Footer */
 .footer {
     padding: 4rem 0;
