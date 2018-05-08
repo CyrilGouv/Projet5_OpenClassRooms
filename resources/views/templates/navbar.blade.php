@@ -12,7 +12,7 @@
                 <nav class="header-top-menu">
                     <ul class="d-flex">
                         <li><a href="/">Accueil</a></li>
-                        <li><a href="/">En savoir plus</a></li>
+                        <li><a href="{{ route('more') }}">En savoir plus</a></li>
                         <li><a href="/">Contact</a></li>
                     </ul>
                 </nav>

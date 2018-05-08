@@ -59,6 +59,15 @@ h1, h2 {
     color: #AD232E;
 }
 
+.bitcoin {
+    color: var(--bitcoin);
+    font-weight: 700;
+
+    transition: .3s;
+}
+.bitcoin:hover {
+    color: var(--black);
+}
 
 /* ----------------------------------------------------- */
 /* Navbar */
@@ -142,6 +151,12 @@ h1, h2 {
     margin-top: 1.2rem;
 }
 
+#header-default {
+    padding-bottom: 2rem;
+    background-color: var(--black);
+
+    color: var(--white);
+}
 
 
 /* ----------------------------------------------------- */
@@ -164,6 +179,57 @@ h1, h2 {
     height: 600px;
 }
 
+
+/* ----------------------------------------------------- */
+/* Content */
+.more, .more-right {
+    padding: 4rem 0;
+}
+
+.more {
+    margin-right: 2rem;
+}
+
+.more h2,
+.more h3,
+.more-widget h4 {
+    margin-bottom: 2rem;
+
+    color: var(--black);
+}
+
+.more h3 {
+    margin-top: 4rem;
+}
+
+.more-content {
+    text-align: justify;
+    color: var(--lightBlack);
+    font-weight: 300;
+}
+
+.more ul {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.more-widget {
+    margin-bottom: 4rem;
+}
+
+.more-widget h4 {
+    padding: .5rem .3rem;
+    background-color: var(--bitcoin);
+    
+    color: var(--white);
+}
+
+.more-widget p {
+    font-size: 1rem;
+    color: var(--lightBlack);
+    font-weight: 300;
+}
 
 /* ----------------------------------------------------- */
 /* Footer */

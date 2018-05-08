@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/more', function () {
+    return view('more');
+})->name('more');
