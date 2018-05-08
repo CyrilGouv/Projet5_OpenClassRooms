@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer-logo">
             <p>{{ config('app.name') }}</p>
-            <p>Crée par <a href="http://www.cyrilgouverneur.com">Cyril Gouverneur</a></p>
+            <p>Crée par <a target="_blank" href="http://www.cyrilgouverneur.com">Cyril Gouverneur</a></p>
             <p>Copyright &copy; {{ date('Y') }}</p>
             <p>Tous droits réservés</p>
             <p><a href="{{ route('mentions') }}">Mentions Légales</a></p>

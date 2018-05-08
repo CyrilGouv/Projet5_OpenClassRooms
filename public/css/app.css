@@ -70,7 +70,7 @@ h1, h2 {
 }
 
 /* ----------------------------------------------------- */
-/* Navbar */
+/* Header */
 #header {
     position: relative;
     height: 80vh;
@@ -92,6 +92,10 @@ h1, h2 {
 }
 .header-top-menu li:first-child {
     margin-left: 0;
+}
+
+.header-top-menu li.active {
+    color: var(--bitcoin);
 }
 
 .header-top-menu a {
@@ -258,12 +262,20 @@ h1, h2 {
 /* Mentions Légales */
 .mentions {
     padding: 4rem 0;
+    margin-right: 2rem;
+
+    text-align: justify;
 }
 
 .mentions h2 {
     margin-bottom: 2rem;
 
     text-transform: uppercase;
+}
+
+.mentions p {
+    font-weight: 300;
+    color: var(--lightBlack);
 }
 
 
