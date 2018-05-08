@@ -5,3 +5,8 @@ $(document).ready(function() {
         time: 2000
     });
 })
+
+
+// Init Map Object
+const map = new Map;
+map.init();

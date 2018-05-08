@@ -26,6 +26,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="{{ asset('js/plugins/counterup.js') }}"></script>
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl5rd08j7iXLhYA2KVVQiT_O5lJoPB1Og"></script>
+    
+    <script src="{{ asset('js/class/map.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
