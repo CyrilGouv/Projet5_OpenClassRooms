@@ -311,6 +311,23 @@ h1, h2 {
     color: var(--white);
 }
 
+.footer-logo .socials {
+    font-size: 2rem;
+}
+
+.footer-logo .socials a {
+    color: var(--bitcoin);
+
+    transition: .3s;
+}
+.footer-logo .socials a:hover {
+    color: var(--white);
+}
+
+.footer-logo .socials a:first-child {
+    margin-right: .5rem;
+}
+
 /* ----------------------------------------------------- */
 /* Animation */
 @keyframes breath {
