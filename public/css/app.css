@@ -94,7 +94,7 @@ h1, h2 {
     margin-left: 0;
 }
 
-.header-top-menu li.active {
+.header-top-menu li.active a {
     color: var(--bitcoin);
 }
 
