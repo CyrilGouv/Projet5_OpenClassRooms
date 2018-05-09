@@ -9,6 +9,13 @@ $(document).ready(function() {
 /* AOS Initialisation */
 AOS.init();
 
+
+
+/* Google Maps */
+
 // Init Map Object
 const map = new Map;
-map.init();
+// Check if map "exists" to avoid console errors & optimize
+if (Object.getOwnPropertyNames(map).length !== 0) {
+    map.init();
+}
