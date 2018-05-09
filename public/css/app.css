@@ -298,9 +298,12 @@ h1, h2 {
 }
 
 .footer-logo p:first-child {
-    color: var(--bitcoin);
     font-weight: 700;
     font-size: 2rem;
+}
+
+.footer-logo p:last-child {
+    font-size: 0.8rem;
 }
 
 .footer-logo a {

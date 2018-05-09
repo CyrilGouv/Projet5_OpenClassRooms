@@ -1,0 +1,72 @@
+@media(max-width: 1200px) {
+    #header {
+        background-size: cover!important;
+        animation: none!important;
+    }
+}
+
+@media(max-width: 991px) {
+    .center-responsive {
+        justify-content: center!important;
+    }
+    
+    .header-blurb {
+        font-size: 1.5rem;
+    }
+    
+    .header-blurb .counter {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--bitcoin);
+    }
+
+    .header-blurb-cta {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media(max-width: 767px) {
+    .header-blurb {
+        font-size: 1.25rem;
+    }
+    
+    .header-blurb .counter {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--bitcoin);
+    }
+
+    .header-blurb-cta {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+    }
+}
+
+
+@media(max-width: 575px) {
+    .header-blurb {
+        font-size: 1rem;
+    }
+    
+    .header-blurb .counter {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--bitcoin);
+    }
+
+    .header-blurb-cta {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.6rem;
+    }
+}
