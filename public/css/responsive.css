@@ -27,6 +27,14 @@
     .btn {
         font-size: 0.8rem;
     }
+
+    .more, .contact, .mentions {
+        margin-right: 0!important;
+    }
+
+    .more-right {
+        overflow-x: hidden;
+    }
 }
 
 
