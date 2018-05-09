@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="contact">
-                    <div class="contact-form">
+                    <div class="contact-form" aos-animate data-aos="fade-right">
                         <h2>Contact</h2>
                         <p>Vous souhaitez ajouter votre business à notre annuaire ou tout simplement nous contacter, n'hésitez pas !</p>
                         <form action="" method="post">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 more-right">
+            <div class="col-lg-4 more-right" aos-animate data-aos="fade-left">
                 <div class="more-widget">
                     <h4>Cours en temps réel</h4>
                     <p><strong>BTC:</strong> € <span class="counter">7694.46</span></p>

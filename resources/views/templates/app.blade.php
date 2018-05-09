@@ -15,6 +15,9 @@
     <!-- Font Awesome Cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+    <!-- AOS Cdn -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
@@ -34,6 +37,9 @@
     <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl5rd08j7iXLhYA2KVVQiT_O5lJoPB1Og"></script>
     
+    <!-- AOS JS Cdn -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
     <script src="{{ asset('js/class/map.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

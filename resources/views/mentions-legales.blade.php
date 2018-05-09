@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <div class="mentions">
+                <div class="mentions" aos-animate data-aos="fade-right">
                     <h2>Mentions Légales</h2>
                     <div class="mentions-content">
                         <p>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 more-right">
+            <div class="col-lg-4 more-right" aos-animate data-aos="fade-left">
                 <div class="more-widget">
                     <h4>Cours en temps réel</h4>
                     <p><strong>BTC:</strong> €<span class="counter">7694.46</span></p>

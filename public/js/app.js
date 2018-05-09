@@ -6,6 +6,8 @@ $(document).ready(function() {
     });
 })
 
+/* AOS Initialisation */
+AOS.init();
 
 // Init Map Object
 const map = new Map;
