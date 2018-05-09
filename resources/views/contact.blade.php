@@ -11,9 +11,10 @@
                     <div class="contact-form" aos-animate data-aos="fade-right">
                         <h2>Contact</h2>
                         <p>Vous souhaitez ajouter votre business à notre annuaire ou tout simplement nous contacter, n'hésitez pas !</p>
-                        <form action="" method="post">
+                        <form action="{{ route('sendMail') }}" method="POST">
+                            {{ csrf_field() }}
                             <div class="form-group">
-                                <label for="name">Nom :<sup>*</sup></label>
+                                <label for="name">Nom : <sup>*</sup></label>
                                 <input type="text" class="form-control" name="name">
                             </div>
                             <div class="form-group">
@@ -23,6 +24,10 @@
                             <div class="form-group">
                                 <label for="email">Email : <sup>*</sup></label>
                                 <input type="text" class="form-control" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet : <sup>*</sup></label>
+                                <input type="text" class="form-control" name="subject">
                             </div>
                             <div class="form-group">
                                 <label for="message">Message : <sup>*</sup></label>
