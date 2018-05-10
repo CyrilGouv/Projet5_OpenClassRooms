@@ -11,4 +11,6 @@ Route::get('/mentions-legales', 'PagesController@mentions')->name('mentions');
 Route::post('/contact', 'ContactsController@send')->name('sendMail');
 Auth::routes();
 
+
+/* Admin */
 Route::get('/admin', 'AdminController@index')->name('admin');
