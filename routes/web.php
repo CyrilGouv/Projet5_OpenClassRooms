@@ -14,3 +14,6 @@ Auth::routes();
 
 /* Admin */
 Route::get('/admin', 'AdminController@index')->name('admin');
+
+/* Bitcoins */
+Route::resource('bitcoins', 'BitcoinsController');
