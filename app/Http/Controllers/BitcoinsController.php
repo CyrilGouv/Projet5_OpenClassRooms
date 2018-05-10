@@ -14,9 +14,7 @@ class BitcoinsController extends Controller
      */
     public function index()
     {
-        $bitcoins = Bitcoin::orderBy('created_at', 'desc')->get();
-
-        return view('admin', compact('bitcoins'));
+        
     }
 
     /**

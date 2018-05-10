@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Bitcoin;
 
 class AdminController extends Controller
 {
@@ -23,6 +24,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin');
+        $bitcoins = Bitcoin::orderBy('created_at', 'desc')->get();
+
+        return view('admin', compact('bitcoins'));
     }
 }
