@@ -162,6 +162,20 @@ h1, h2 {
     color: var(--white);
 }
 
+/* ADMIN */
+#header-default .navbar-brand,
+#header-default .nav-link {
+    color: var(--white);
+}
+
+#header-default .navbar-brand {
+    font-size: 2.5rem;
+}
+
+#header-default .nav-link {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
 
 /* ----------------------------------------------------- */
 /* MAP */
