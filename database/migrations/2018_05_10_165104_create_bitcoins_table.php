@@ -15,6 +15,17 @@ class CreateBitcoinsTable extends Migration
     {
         Schema::create('bitcoins', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('address');
+            $table->float('lat');
+            $table->float('lng');
+            $table->string('description');
+            $table->string('website')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
             $table->timestamps();
         });
     }
