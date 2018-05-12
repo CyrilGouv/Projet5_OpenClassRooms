@@ -50,7 +50,7 @@
                             <div class="form-group">
                                 <input type="hidden" name="_method" value="PUT">
                                 <input type="submit" value="Éditer" class="btn">
-                                <a href="{{ route('admin') }}" class="btn btn-secondary">Annuler</a>
+                                <a href="{{ route('admin') }}" class="btn btn-cancel">Annuler</a>
                             </div>
                         </form>
                     </div>

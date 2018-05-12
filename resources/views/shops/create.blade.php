@@ -49,7 +49,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Ajouter" class="btn">
-                                <a href="{{ route('admin') }}" class="btn btn-secondary">Annuler</a>
+                                <a href="{{ route('admin') }}" class="btn btn-cancel">Annuler</a>
                             </div>
                         </form>
                     </div>

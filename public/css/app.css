@@ -51,6 +51,27 @@ h1, h2 {
     border: 2px solid var(--bitcoin);
 }
 
+.btn-red {
+    color: #AD232E;
+    border: 2px solid #AD232E;
+    background-color: var(--white);
+}
+.btn-red:hover {
+    color: var(--white);
+    border: 2px solid #AD232E;
+    background-color: #AD232E;
+}
+.btn-cancel {
+    color: var(--lightBlack);
+    border: 2px solid var(--lightBlack);
+    background-color: var(--white);
+}
+.btn-cancel:hover {
+    color: var(--white);
+    border: 2px solid var(--lightBlack);
+    background-color: var(--lightBlack);
+}
+
 .blue {
     color: #425A9E;
 }

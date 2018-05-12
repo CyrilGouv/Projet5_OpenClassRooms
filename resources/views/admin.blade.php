@@ -26,7 +26,7 @@
                                                 {{ csrf_field() }}
                                                 <div class="form-group">
                                                     <input type="hidden" name="_method" value="DELETE">
-                                                    <input type="submit" value="Supprimer" class="btn btn-danger">
+                                                    <input type="submit" value="Supprimer" class="btn btn-red">
                                                 </div>
                                             </form>
                                         </td>
