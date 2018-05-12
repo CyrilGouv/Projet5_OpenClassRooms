@@ -24,7 +24,7 @@ class BitcoinsController extends Controller
      */
     public function create()
     {
-        //
+        return view('shops.create');
     }
 
     /**
@@ -35,7 +35,27 @@ class BitcoinsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'address' => 'required',
+            'description' => 'required',
+        ]);
+
+        // Creation de notre new boutique
+        $bitcoin = new Bitcoin;
+        $bitcoin->name        = $request->name;
+        $bitcoin->address     = $request->address;
+        $bitcoin->description = $request->description;
+        $bitcoin->website     = $request->website;
+        $bitcoin->email       = $request->email;
+        $bitcoin->phone       = $request->phone;
+        $bitcoin->facebook    = $request->facebook;
+        $bitcoin->twitter     = $request->twitter;
+        $bitcoin->instagram   = $request->instagram;
+
+        $bitcoin->save();
+
+        return redirect(route('admin'));
     }
 
     /**
