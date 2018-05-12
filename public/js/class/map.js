@@ -6,17 +6,8 @@ class Map {
         this.lat = 46.52863469527167;
         this.lng = 2.43896484375;
 
-        // Icon
-        // this.icons = {
-        //   greenBike: {
-        //     icon: 'img/icons/greenBike.png'
-        //   },
-        //   redBike: {
-        //     icon: 'img/icons/redBike.png'
-        //   }
-        // }
-
         this.map = null;
+        this.markers = null;
     }
 
 
@@ -189,5 +180,15 @@ class Map {
                 }
             ]
         });
+    }
+
+    // Ajoute les Markers à la Map
+    addMarkers(lat, lng) {
+      const latLng = new google.maps.LatLng(lat, lng);
+
+      this.markers = new google.maps.Marker({
+          position: latLng,
+          map: this.map
+      });
     }
 }

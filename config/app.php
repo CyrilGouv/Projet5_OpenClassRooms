@@ -151,7 +151,7 @@ return [
          * Package Service Providers...
          */
         Alexpechkarev\GoogleGeocoder\GoogleGeocoderServiceProvider::class,
-
+        Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         /*
          * Application Service Providers...
          */
