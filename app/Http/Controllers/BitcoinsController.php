@@ -40,22 +40,33 @@ class BitcoinsController extends Controller
             'address' => 'required',
             'description' => 'required',
         ]);
+        
+        // Récupération des longitudes et latitudes de l'adresse
+        $param = [
+            'address' => $request->address
+        ];
 
-        // Creation de notre new boutique
-        $bitcoin = new Bitcoin;
-        $bitcoin->name        = $request->name;
-        $bitcoin->address     = $request->address;
-        $bitcoin->description = $request->description;
-        $bitcoin->website     = $request->website;
-        $bitcoin->email       = $request->email;
-        $bitcoin->phone       = $request->phone;
-        $bitcoin->facebook    = $request->facebook;
-        $bitcoin->twitter     = $request->twitter;
-        $bitcoin->instagram   = $request->instagram;
+        $response = \Geocoder::geocode('json', $param);
+        $location = json_decode($response);
 
-        $bitcoin->save();
+        if ($location->status === 'OK') {
+            // Creation de notre new boutique
+            $bitcoin = new Bitcoin;
+            $bitcoin->name        = $request->name;
+            $bitcoin->address     = $location->results[0]->formatted_address;
+            $bitcoin->lat         = $location->results[0]->geometry->location->lat;
+            $bitcoin->lng         = $location->results[0]->geometry->location->lng;
+            $bitcoin->description = $request->description;
+            $bitcoin->website     = $request->website;
+            $bitcoin->email       = $request->email;
+            $bitcoin->phone       = $request->phone;
+            $bitcoin->facebook    = $request->facebook;
+            $bitcoin->twitter     = $request->twitter;
+            $bitcoin->instagram   = $request->instagram;
 
-        return redirect(route('admin'));
+            $bitcoin->save();
+            return redirect(route('admin'));
+        }
     }
 
     /**

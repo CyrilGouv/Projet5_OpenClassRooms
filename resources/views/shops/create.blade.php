@@ -32,10 +32,6 @@
                                 <input type="text" class="form-control" name="phone">
                             </div>
                             <div class="form-group">
-                                <label for="phone">Téléphone : </label>
-                                <input type="text" class="form-control" name="phone">
-                            </div>
-                            <div class="form-group">
                                 <label for="facebook">Facebook : </label>
                                 <input type="text" class="form-control" name="facebook">
                             </div>
