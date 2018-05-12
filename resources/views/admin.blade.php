@@ -21,12 +21,20 @@
                                     <tr>
                                         <td>{{ $bitcoin->name }}</td>
                                         <td><a href="{{ route('bitcoins.edit', $bitcoin->id) }}" class="btn float-right">Éditer</a></td>
-                                        <td></td>
+                                        <td>
+                                            <form action="{{ route('bitcoins.destroy', $bitcoin->id) }}" method="POST">
+                                                {{ csrf_field() }}
+                                                <div class="form-group">
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <input type="submit" value="Supprimer" class="btn btn-danger">
+                                                </div>
+                                            </form>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </table>
                         @else
-                            <p>Votre base de donnée est vide</p>
+                            <p>Votre base de données est vide</p>
                         @endif
                     </div>
                 </div>

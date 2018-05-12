@@ -144,6 +144,9 @@ class BitcoinsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bitcoin = Bitcoin::findOrFail($id);
+        $bitcoin->delete();
+        
+        return redirect(route('admin'));
     }
 }
