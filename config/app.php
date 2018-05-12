@@ -150,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Alexpechkarev\GoogleGeocoder\GoogleGeocoderServiceProvider::class,
 
         /*
          * Application Service Providers...
