@@ -6,7 +6,7 @@
  
         <div class="header-blurb">
             <p aos-animate data-aos="zoom-in">
-                <span class="counter">258</span><br>
+                <span class="counter">{{ $count }}</span><br>
                 Boutiques<br> acceptent les
                 <span class="header-blurb-underline">bitcoins</span>
             </p>
