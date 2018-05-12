@@ -88,7 +88,9 @@ class BitcoinsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bitcoin = Bitcoin::findOrFail($id);
+
+        return view('shops.edit', compact('bitcoin'));
     }
 
     /**
@@ -100,7 +102,38 @@ class BitcoinsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'address' => 'required',
+            'description' => 'required',
+        ]);
+        
+        // Récupération des longitudes et latitudes de l'adresse
+        $param = [
+            'address' => $request->address
+        ];
+
+        $response = \Geocoder::geocode('json', $param);
+        $location = json_decode($response);
+
+        if ($location->status === 'OK') {
+            // Creation de notre new boutique
+            $bitcoin = Bitcoin::findOrFail($id);
+            $bitcoin->name        = $request->name;
+            $bitcoin->address     = $location->results[0]->formatted_address;
+            $bitcoin->lat         = $location->results[0]->geometry->location->lat;
+            $bitcoin->lng         = $location->results[0]->geometry->location->lng;
+            $bitcoin->description = $request->description;
+            $bitcoin->website     = $request->website;
+            $bitcoin->email       = $request->email;
+            $bitcoin->phone       = $request->phone;
+            $bitcoin->facebook    = $request->facebook;
+            $bitcoin->twitter     = $request->twitter;
+            $bitcoin->instagram   = $request->instagram;
+
+            $bitcoin->save();
+            return redirect(route('admin'));
+        }
     }
 
     /**

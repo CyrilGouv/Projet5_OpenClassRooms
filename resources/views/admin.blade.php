@@ -20,6 +20,8 @@
                                 @foreach($bitcoins as $bitcoin)
                                     <tr>
                                         <td>{{ $bitcoin->name }}</td>
+                                        <td><a href="{{ route('bitcoins.edit', $bitcoin->id) }}" class="btn float-right">Éditer</a></td>
+                                        <td></td>
                                     </tr>
                                 @endforeach
                             </table>
