@@ -37,10 +37,15 @@
     <!-- Google Maps API -->
     @if (Route::is('home'))
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl5rd08j7iXLhYA2KVVQiT_O5lJoPB1Og"></script>
-        <script src="{{ asset('js/class/map.js') }}"></script>
+        <script src="{{ asset('js/class/Map.js') }}"></script>
     @endif
     <!-- AOS JS Cdn -->
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <!-- Coin Market Cap API -->
+    @if (Route::is('more') || Route::is('contact') || Route::is('mentions') || Route::is('mentions'))
+        <script src="{{ asset('js/class/CryptoPrice.js') }}"></script>
+    @endif
 
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

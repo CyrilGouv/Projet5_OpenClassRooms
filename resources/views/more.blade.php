@@ -58,9 +58,9 @@
             <div class="col-lg-4 more-right" aos-animate data-aos="fade-left">
                 <div class="more-widget">
                     <h4>Cours en temps réel</h4>
-                    <p><strong>BTC:</strong> €<span class="counter">7694.46</span></p>
-                    <p><strong>ETH:</strong> €<span class="counter">617.97</span></p>
-                    <p><strong>LTC:</strong> €<span class="counter">134.87</span></p>
+                    <p><strong>BTC:</strong> € <span class="btcPrice"></span></p>
+                    <p><strong>ETH:</strong> € <span class="ethPrice"></span></p>
+                    <p><strong>LTC:</strong> € <span class="ltcPrice"></span></p>
                 </div>
                 <div class="more-widget">
                     <h4>Dons Bitcoin</h4>

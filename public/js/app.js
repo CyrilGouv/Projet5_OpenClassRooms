@@ -12,10 +12,25 @@ AOS.init();
 
 
 /* Google Maps */
-
-// Init Map Object
 const map = new Map;
 // Check if map "exists" to avoid console errors & optimize
 if (Object.getOwnPropertyNames(map).length !== 0) {
     map.init();
 }
+
+
+/* CoinMarketCap API */
+if (window.location.href !== 'http://127.0.0.1:8000/') {
+    const cryptoPrice = new CryptoPrice;
+
+    cryptoPrice.getData()
+        .then(data => {
+            document.querySelector('.btcPrice').innerHTML = Math.round(data.data[1].quotes.EUR.price);
+            document.querySelector('.ethPrice').innerHTML = Math.round(data.data[1027].quotes.EUR.price);
+            document.querySelector('.ltcPrice').innerHTML = Math.round(data.data[2].quotes.EUR.price);
+        })
+        .catch(err => console.log(err));
+}
+
+
+
