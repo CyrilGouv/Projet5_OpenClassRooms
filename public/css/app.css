@@ -218,6 +218,62 @@ h1, h2 {
     height: 600px;
 }
 
+/* InfoWindow */
+#shopName {
+    color: var(--bitcoin);
+    text-transform: uppercase;
+}
+
+#shopName p {
+    color: var(--lightBlack);
+}
+
+#shopName .fa,
+#shopWebsite .fa,
+#shopEmail .fa,
+#shopDesc .fa {
+    color: var(--black);
+    font-size: 1rem;
+}
+
+#shopWebsite a,
+#shopEmail a {
+    color: var(--lightBlack);
+    transition: .3s;
+}
+#shopWebsite a:hover,
+#shopEmail a:hover {
+    color: var(--bitcoin);
+}
+
+#shopEmail .fa {
+    font-size: 0.8rem;
+}
+
+#shopPhone .fa {
+    font-size: 1.2rem;
+}
+
+#shopFacebook a .fa,
+#shopTwitter a .fa,
+#shopInstagram a .fa {
+    color: var(--black);
+    font-size: 1.5rem;
+
+    margin-right: 0.25rem;
+    transition: .3s;
+}
+
+#shopFacebook a:hover .fa,
+#shopTwitter a:hover .fa,
+#shopInstagram a:hover .fa {
+    color: var(--bitcoin);
+}
+
+#shopDesc {
+    margin-top: 1rem;
+}
+
 
 /* ----------------------------------------------------- */
 /* Content */

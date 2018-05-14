@@ -18,8 +18,11 @@ if (Object.getOwnPropertyNames(map).length !== 0) {
     map.init();
 
     shops.bitcoins.forEach(shop => {
-        // Ajoute un Marker pour chaque station avec son icon
+        // Ajoute un Marker pour chaque station
         map.addMarkers(shop.lat, shop.lng);
+
+        // Récupère les infos de la boutique au click sur le marker
+        map.clickMarkers(shop);
     });
 }
 

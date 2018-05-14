@@ -8,6 +8,8 @@ class Map {
 
         this.map = null;
         this.markers = null;
+
+        this.currentInfos = null;
     }
 
 
@@ -182,6 +184,7 @@ class Map {
         });
     }
 
+
     // Ajoute les Markers à la Map
     addMarkers(lat, lng) {
       const latLng = new google.maps.LatLng(lat, lng);
@@ -191,4 +194,43 @@ class Map {
           map: this.map
       });
     }
+
+
+    // Gère le click pour chaque Markers
+    clickMarkers(shop) {   
+
+      const shopBlurb = 
+        '<div id="shopName">' +
+          '<h3>' + shop.name + '</h3>' +
+          '<p><i class="fa fa-map-marker" aria-hidden="true"></i> ' + shop.address + '</p>' +
+        '</div>'
+      ;
+
+      const shopWebsite     = shop.website !== null ? '<div id="shopWebsite"><i class="fa fa-globe" aria-hidden="true"></i> <a href="' + shop.website + '" target="_blank">' + shop.website + '</a></div>' : '';
+      const shopPhone       = shop.phone !== null ? '<div id="shopPhone"><i class="fa fa-mobile" aria-hidden="true"></i> ' + shop.phone + '</div>' : '';
+      const shopEmail       = shop.email !== null ? '<div id="shopEmail"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:' + shop.email + '">' + shop.email + '</a></div>' : '';
+      const shopFacebook    = shop.facebook !== null ? '<span id="shopFacebook"><a href="' + shop.facebook + '" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></span>' : '';
+      const shopTwitter     = shop.twitter !== null ? '<span id="shopTwitter"><a href="' + shop.twitter + '" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></span>' : '';
+      const shopInstagram   = shop.instagram !== null ? '<span id="shopInstagram"><a href="' + shop.instagram + '" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>' : '';
+      const shopDescription = '<div id="shopDesc"><i class="fa fa-info-circle" aria-hidden="true"></i> ' + shop.description + '</div>'; 
+
+      const shopContent = shopBlurb + shopWebsite + shopEmail + shopPhone + shopFacebook + shopTwitter + shopInstagram + shopDescription;
+
+      const infos = new google.maps.InfoWindow({
+        content: shopContent,
+        maxWidth: 250
+      });
+
+      this.markers.addListener('click', (e) => {
+        // Permet d'afficher q'une seule infoWindow à la fois
+        if (this.currentInfoWindow != null) { 
+            this.currentInfoWindow.close(); 
+        } 
+        // Gère l'affichage des infos de la station
+        infos.open(this.map, this.markers);
+        infos.setPosition(e.latLng);
+        this.currentInfoWindow = infos;
+      });
+    }
+
 }
