@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administration <span class="float-right"><a href="{{ route('bitcoins.create') }}" class="btn">Ajouter une boutique</a></span></div>
+                    <div class="card-header">Administration <span class="float-right"><a href="{{ route('bitcoins.create') }}" class="btn btn-reverse">Ajouter une boutique</a></span></div>
     
                     <div class="card-body">
                         <h2>Liste des boutiques</h2>

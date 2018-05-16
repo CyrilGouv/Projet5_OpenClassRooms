@@ -47,7 +47,18 @@ h1, h2 {
 }
 .btn:hover {
     background-color: var(--bitcoin);
-    color: white;
+    color: var(--white);
+    border: 2px solid var(--bitcoin);
+}
+.btn-reverse {
+    border: 2px solid var(--bitcoin);
+    background-color: var(--bitcoin);
+    color: var(--white);
+    font-weight: 700;
+}
+.btn-reverse:hover {
+    background-color: var(--white);
+    color: var(--bitcoin);
     border: 2px solid var(--bitcoin);
 }
 
