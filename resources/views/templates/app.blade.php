@@ -37,6 +37,7 @@
     <!-- Google Maps API -->
     @if (Route::is('home'))
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl5rd08j7iXLhYA2KVVQiT_O5lJoPB1Og"></script>
+        <script src="{{ asset('js/plugins/markerclusterer.js') }}"></script>
         <script src="{{ asset('js/class/Map.js') }}"></script>
     @endif
     <!-- AOS JS Cdn -->

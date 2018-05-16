@@ -10,6 +10,9 @@ class Map {
         this.markers = null;
 
         this.currentInfos = null;
+
+        this.markerCluster = null;
+        this.markersArr = [];
     }
 
 
@@ -191,8 +194,16 @@ class Map {
 
       this.markers = new google.maps.Marker({
           position: latLng,
-          map: this.map
+          map: this.map,
+          icon: 'img/icons/marker.png'
       });
+
+      this.markersArr.push(this.markers);
+    }
+
+    // Groupe les Markers grâce à MarkerClusterer
+    markerClusterer(map, markers) {
+      this.markerCluster = new MarkerClusterer(map, markers, {imagePath: 'img/markerClusterer/m'});
     }
 
 

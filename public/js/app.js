@@ -23,7 +23,12 @@ if (Object.getOwnPropertyNames(map).length !== 0) {
 
         // Récupère les infos de la boutique au click sur le marker
         map.clickMarkers(shop);
+
     });
+    
+    // On groupe les Markers grâce à MarkerClusterer
+    map.markerClusterer(map.map, map.markersArr);
+    
 }
 
 
