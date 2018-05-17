@@ -14,6 +14,7 @@ Route::post('/contact', 'ContactsController@send')->name('sendMail');
 /* Admin */
 Auth::routes();
 Route::get('/admin', 'AdminController@index')->name('admin');
+Route::post('/admin', 'AdminController@search')->name('search');
 
 
 /* Bitcoins */

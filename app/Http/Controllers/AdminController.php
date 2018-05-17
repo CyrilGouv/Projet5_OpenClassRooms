@@ -28,4 +28,12 @@ class AdminController extends Controller
 
         return view('admin', compact('bitcoins'));
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->search;
+        $bitcoins = Bitcoin::where('name', 'like', '%'. $query .'%')->get();
+
+        return view('search', compact('bitcoins', 'query'));
+    }
 }

@@ -82,6 +82,16 @@ h1, h2 {
     border: 2px solid var(--lightBlack);
     background-color: var(--lightBlack);
 }
+.btn-cancel-reverse {
+    color: var(--white);
+    border: 2px solid var(--lightBlack);
+    background-color: var(--lightBlack);
+}
+.btn-cancel-reverse:hover {
+    color: var(--lightBlack);
+    border: 2px solid var(--lightBlack);
+    background-color: var(--white);
+}
 
 .blue {
     color: #425A9E;

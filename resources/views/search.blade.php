@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Administration <span class="float-right"><a href="{{ route('bitcoins.create') }}" class="btn btn-reverse">Ajouter une boutique</a></span></div>
+                    <div class="card-header">Administration <span class="float-right"><a href="{{ route('bitcoins.create') }}" class="btn btn-reverse">Ajouter une boutique</a></span><a href="{{ route('admin') }}" class="mr-1 float-right btn btn-cancel-reverse">Toutes les boutiques</a> </div>
     
                     <div class="card-body">
                         <h2>Liste des boutiques</h2>
@@ -14,7 +14,7 @@
                             {{ csrf_field() }}
                             <div class="form-row">
                                 <div class="col-9">
-                                    <input type="text" class="form-control" name="search" value="{{ old('search') }}" placeholder="Rechercher une boutique">
+                                    <input type="text" class="form-control" name="search" value="{{ $query }}" placeholder="Rechercher une boutique">
                                 </div>
                                 <div class="col">
                                     <input type="submit" value="Rechercher" class="btn">
@@ -51,9 +51,6 @@
 
                         
                     </div>
-                </div>
-                <div class="bitcoins-pagination d-flex justify-content-center mt-3">
-                    {{ $bitcoins->links() }}
                 </div>
             </div>
         </div>
