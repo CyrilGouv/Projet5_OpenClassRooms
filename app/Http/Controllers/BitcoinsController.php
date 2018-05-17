@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreShopFormRequest;
+use App\Http\Requests\UpdateShopFormRequest;
 use App\Models\Bitcoin;
 
 class BitcoinsController extends Controller
@@ -33,14 +35,8 @@ class BitcoinsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        $this->validate($request, [
-            'name' => 'required',
-            'address' => 'required',
-            'description' => 'required',
-        ]);
-        
+    public function store(StoreShopFormRequest $request)
+    {   
         // Récupération des longitudes et latitudes de l'adresse
         $param = [
             'address' => $request->address
@@ -100,14 +96,8 @@ class BitcoinsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        $this->validate($request, [
-            'name' => 'required',
-            'address' => 'required',
-            'description' => 'required',
-        ]);
-        
+    public function update(UpdateShopFormRequest $request, $id)
+    {   
         // Récupération des longitudes et latitudes de l'adresse
         $param = [
             'address' => $request->address

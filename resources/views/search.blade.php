@@ -15,13 +15,14 @@
                             <div class="form-row">
                                 <div class="col-9">
                                     <input type="text" class="form-control" name="search" value="{{ $query }}" placeholder="Rechercher une boutique">
+                                    {!! $errors->first('search', '<p class="form-errors">:message</p>') !!}
                                 </div>
                                 <div class="col">
                                     <input type="submit" value="Rechercher" class="btn">
                                 </div>
                             </div>
                         </form>
-                        @include('layouts.partials.flash')
+                        @include('partials.flash')
                         @if(count($bitcoins) > 0)
                             <table class="table table-striped">
                                 <tr>

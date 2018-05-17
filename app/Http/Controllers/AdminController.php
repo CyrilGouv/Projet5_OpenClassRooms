@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\SearchFormRequest;
 use App\Models\Bitcoin;
 
 class AdminController extends Controller
@@ -29,12 +30,8 @@ class AdminController extends Controller
         return view('admin', compact('bitcoins'));
     }
 
-    public function search(Request $request)
+    public function search(SearchFormRequest $request)
     {   
-        $this->validate($request, [
-            'search' => 'required'
-        ]);
-        
         $query = $request->search;
         $bitcoins = Bitcoin::where('name', 'like', '%'. $query .'%')->get();
 

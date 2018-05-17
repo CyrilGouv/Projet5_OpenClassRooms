@@ -3,19 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactFormRequest;
 use Illuminate\Mail\Mailable;
 use Mail;
 
 class ContactsController extends Controller
 {
-    public function send(Request $request) {
-        $this->validate($request, [
-            'name'    => 'required',
-            'prenom'  => 'required',
-            'email'   => 'required|email',
-            'subject' => 'required',
-            'message' => 'required'
-        ]);
+    public function send(ContactFormRequest $request) {
 
         $data = [
             'name'    => $request->name,

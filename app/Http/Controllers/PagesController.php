@@ -9,9 +9,8 @@ use JavaScript;
 class PagesController extends Controller
 {
     public function index() {
-        $count = Bitcoin::count();
-        
         $bitcoins = Bitcoin::all();
+        $count = $bitcoins->count();
         // Permet d'avoir accès aux données dans le js
         JavaScript::put(compact('bitcoins'));
 
