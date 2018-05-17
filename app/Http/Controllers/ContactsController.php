@@ -21,7 +21,7 @@ class ContactsController extends Controller
 
         Mail::send('emails.emailTemplate', $data, function($message) use($data) {
             $message->from($data['email']);
-            $message->to('cyrilgouv@gmail.com');
+            $message->to(config('mail-admin.email'));
             $message->subject($data['subject']);
         });
 
