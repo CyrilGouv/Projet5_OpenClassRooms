@@ -9,16 +9,17 @@
                     <div class="card-header">Ajouter une nouvelle boutique</div>
                     
                     <div class="card-body">
-                        @include('layouts.partials.flash')
                         <form action="{{ route('bitcoins.store') }}" method="POST">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="name">Nom de la boutique: <sup>*</sup></label>
                                 <input type="text" class="form-control" name="name">
+                                {!! $errors->first('name', '<p class="form-errors">:message</p>') !!}
                             </div>
                             <div class="form-group">
                                 <label for="address">Adresse : <sup>*</sup></label>
                                 <input type="text" class="form-control" name="address" id="address">
+                                {!! $errors->first('address', '<p class="form-errors">:message</p>') !!}
                             </div>
                             <div class="form-group">
                                 <label for="website">Site Web : </label>
@@ -27,6 +28,7 @@
                             <div class="form-group">
                                 <label for="email">Email : </label>
                                 <input type="text" class="form-control" name="email">
+                                {!! $errors->first('email', '<p class="form-errors">:message</p>') !!}
                             </div>
                             <div class="form-group">
                                 <label for="phone">Téléphone : </label>
@@ -47,6 +49,7 @@
                             <div class="form-group">
                                 <label for="description">Description : <sup>*</sup></label>
                                 <textarea rows="8" type="text" class="form-control" name="description"></textarea>
+                                {!! $errors->first('description', '<p class="form-errors">:message</p>') !!}
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Ajouter" class="btn">
