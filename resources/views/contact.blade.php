@@ -11,6 +11,7 @@
                     <div class="contact-form" aos-animate data-aos="fade-right">
                         <h2>Contact</h2>
                         <p>Vous souhaitez ajouter votre business à notre annuaire ou tout simplement nous contacter, n'hésitez pas !</p>
+                        @include('layouts.partials.flash')
                         <form action="{{ route('sendMail') }}" method="POST">
                             {{ csrf_field() }}
                             <div class="form-group">

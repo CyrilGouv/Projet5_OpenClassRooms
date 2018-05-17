@@ -10,6 +10,7 @@
     
                     <div class="card-body">
                         <h2>Liste des boutiques</h2>
+                        @include('layouts.partials.flash')
                         @if(count($bitcoins) > 0)
                             <table class="table table-striped">
                                 <tr>

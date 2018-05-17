@@ -9,6 +9,7 @@
                     <div class="card-header">Éditer une boutique</div>
     
                     <div class="card-body">
+                        @include('layouts.partials.flash')
                         <form action="{{ route('bitcoins.update', $bitcoin->id) }}" method="POST">
                             {{ csrf_field() }}
                             <div class="form-group">

@@ -7,8 +7,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Ajouter une nouvelle boutique</div>
-    
+                    
                     <div class="card-body">
+                        @include('layouts.partials.flash')
                         <form action="{{ route('bitcoins.store') }}" method="POST">
                             {{ csrf_field() }}
                             <div class="form-group">

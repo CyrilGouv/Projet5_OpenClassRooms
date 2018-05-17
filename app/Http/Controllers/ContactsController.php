@@ -31,6 +31,6 @@ class ContactsController extends Controller
             $message->subject($data['subject']);
         });
 
-        return redirect(route('contact'));
+        return redirect(route('contact'))->with('success', 'Votre email a bien été envoyer! Nous y répondrons dans les plus bref délais, merci.');
     }
 }

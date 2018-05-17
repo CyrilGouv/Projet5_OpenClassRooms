@@ -65,7 +65,7 @@ class BitcoinsController extends Controller
             $bitcoin->instagram   = $request->instagram;
 
             $bitcoin->save();
-            return redirect(route('admin'));
+            return redirect(route('admin'))->with('success', 'La boutique ' . $bitcoin->name . ' a bien été ajoutée');
         }
     }
 
@@ -132,7 +132,7 @@ class BitcoinsController extends Controller
             $bitcoin->instagram   = $request->instagram;
 
             $bitcoin->save();
-            return redirect(route('admin'));
+            return redirect(route('admin'))->with('success', 'La boutique ' . $bitcoin->name . ' a bien été mise à jour');
         }
     }
 
@@ -147,6 +147,6 @@ class BitcoinsController extends Controller
         $bitcoin = Bitcoin::findOrFail($id);
         $bitcoin->delete();
         
-        return redirect(route('admin'));
+        return redirect(route('admin'))->with('success', 'La boutique ' . $bitcoin->name . ' a bien été supprimer');
     }
 }
