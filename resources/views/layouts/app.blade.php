@@ -87,5 +87,6 @@
         <script src="{{ asset('js/plugins/jquery.geocomplete.js') }}"></script>
         <script src="{{ asset('js/backend.js') }}"></script>
     @endif
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

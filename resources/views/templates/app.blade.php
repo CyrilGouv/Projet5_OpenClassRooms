@@ -48,6 +48,7 @@
         <script src="{{ asset('js/class/CryptoPrice.js') }}"></script>
     @endif
 
+    <script src="{{ asset('js/front.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
