@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name') }}</title>
+    <meta name="description" content="Annuaire spécialisé dans l'indexation des boutiques et professionnels acceptant le Bitcoin et les cryptomonnaies comme moyen de paiement" />
+    <meta name="keywords" content="Bitcoin, Altcoin, BTC, crypto, cryptomonnaie, annuaire" />
+    <meta name="author" content="Cyril Gouverneur" />
+    <meta name="copyright" content="© {{ config('app.name') }}" />
+    
+    
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Vous recherchez où depensez vos bitcoin ?"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.lafrenchcoin.com/"/>
+    <meta property="og:image" content="http://www.lafrenchcoin.com/"/>
+    <meta property="og:description" content="Annuaire spécialisé dans l'indexation des boutiques et professionnels acceptant le Bitcoin et les cryptomonnaies comme moyen de paiement"/>
+    
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
 
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
