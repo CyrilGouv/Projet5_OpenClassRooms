@@ -209,6 +209,14 @@ h1, h2 {
     text-transform: uppercase;
 }
 
+.bitcoins-pagination .page-link {
+    color: var(--bitcoin);
+}
+.bitcoins-pagination .active .page-link {
+    background-color: var(--bitcoin);
+    border-color: var(--bitcoin);
+}
+
 /* ----------------------------------------------------- */
 /* MAP */
 #map {

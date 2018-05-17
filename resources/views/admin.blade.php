@@ -39,6 +39,9 @@
                         @endif
                     </div>
                 </div>
+                <div class="bitcoins-pagination d-flex justify-content-center mt-3">
+                    {{ $bitcoins->links() }}
+                </div>
             </div>
         </div>
     </div>

@@ -24,7 +24,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $bitcoins = Bitcoin::orderBy('created_at', 'desc')->get();
+        $bitcoins = Bitcoin::orderBy('created_at', 'desc')->paginate(10);
 
         return view('admin', compact('bitcoins'));
     }
