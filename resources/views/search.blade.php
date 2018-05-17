@@ -46,7 +46,7 @@
                                 @endforeach
                             </table>
                         @else
-                            <p>Votre base de données est vide</p>
+                            <p>Aucune entrée ne semble correspondre à votre recherche...</p>
                         @endif
 
                         

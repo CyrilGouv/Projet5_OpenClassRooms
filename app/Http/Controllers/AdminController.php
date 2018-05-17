@@ -30,7 +30,11 @@ class AdminController extends Controller
     }
 
     public function search(Request $request)
-    {
+    {   
+        $this->validate($request, [
+            'search' => 'required'
+        ]);
+        
         $query = $request->search;
         $bitcoins = Bitcoin::where('name', 'like', '%'. $query .'%')->get();
 
