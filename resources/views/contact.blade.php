@@ -16,23 +16,23 @@
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="name">Nom : <sup>*</sup></label>
-                                <input type="text" class="form-control" name="name">
+                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                             </div>
                             <div class="form-group">
                                 <label for="prenom">Prénom : <sup>*</sup></label>
-                                <input type="text" class="form-control" name="prenom">
+                                <input type="text" class="form-control" name="prenom" value="{{ old('prenom') }}">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email : <sup>*</sup></label>
-                                <input type="text" class="form-control" name="email">
+                                <input type="text" class="form-control" name="email" value="{{ old('email') }}">
                             </div>
                             <div class="form-group">
                                 <label for="subject">Sujet : <sup>*</sup></label>
-                                <input type="text" class="form-control" name="subject">
+                                <input type="text" class="form-control" name="subject" value="{{ old('subject') }}">
                             </div>
                             <div class="form-group">
                                 <label for="message">Message : <sup>*</sup></label>
-                                <textarea rows="8" type="text" class="form-control" name="message"></textarea>
+                                <textarea rows="8" type="text" class="form-control" name="message">{{ old('message') }}</textarea>
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Envoyer" class="btn">
