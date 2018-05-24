@@ -13,7 +13,7 @@ AOS.init();
 const home = 'http://127.0.0.1:8000/';
 /* Google Maps */
 
-// Check if map "exists" to avoid console errors & optimize
+// Check if map we are in homepage to avoid console errors & optimize
 if (window.location.href === home) {
     const map = new Map;
     map.init();
