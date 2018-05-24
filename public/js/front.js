@@ -10,11 +10,12 @@ $(document).ready(function() {
 AOS.init();
 
 
-
+const home = 'http://127.0.0.1:8000/';
 /* Google Maps */
-const map = new Map;
+
 // Check if map "exists" to avoid console errors & optimize
-if (Object.getOwnPropertyNames(map).length !== 0) {
+if (window.location.href === home) {
+    const map = new Map;
     map.init();
 
     shops.bitcoins.forEach(shop => {
@@ -33,7 +34,7 @@ if (Object.getOwnPropertyNames(map).length !== 0) {
 
 
 /* CoinMarketCap API */
-if (window.location.href !== 'http://127.0.0.1:8000/') {
+if (window.location.href !== home) {
     const cryptoPrice = new CryptoPrice;
 
     cryptoPrice.getData()
